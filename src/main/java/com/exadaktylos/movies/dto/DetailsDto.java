@@ -2,13 +2,11 @@ package com.exadaktylos.movies.dto;
 
 import lombok.*;
 
-import java.util.Date;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MovieDetailsDto {
+public class DetailsDto {
 
     private String title;
 

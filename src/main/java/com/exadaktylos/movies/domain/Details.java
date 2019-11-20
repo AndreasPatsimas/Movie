@@ -1,5 +1,7 @@
 package com.exadaktylos.movies.domain;
 
+import java.io.Serializable;
+
 import lombok.*;
 import org.hibernate.annotations.*;
 import org.hibernate.annotations.Cache;
@@ -7,9 +9,9 @@ import org.hibernate.annotations.Cache;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
+import javax.persistence.CascadeType;
+
 import java.time.Instant;
-import java.time.LocalDate;
 
 @Data
 @ToString
@@ -20,7 +22,7 @@ import java.time.LocalDate;
 @Entity
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Movie implements Serializable {
+public class Details implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,16 +30,21 @@ public class Movie implements Serializable {
     private Long id;
 
     @NotNull
-    @Column(name = "TITLE")
-    private String title;
+    @Column(name = "DIRECTOR")
+    private String director;
 
     @NotNull
-    @Column(name = "YEAR_ESTABLISHED")
-    private LocalDate year;
+    @Column(name = "DESC")
+    private String description;
 
     @Column(name = "USERINSERT")
     private String insertedByUser;
 
     @Column(name = "TIMEINSERT")
     private Instant timeInserted;
+
+    @NotNull
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "MOVIE_ID")
+    private Movie movie;
 }

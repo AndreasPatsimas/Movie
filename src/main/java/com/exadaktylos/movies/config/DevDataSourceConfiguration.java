@@ -32,8 +32,6 @@ public class DevDataSourceConfiguration {
         super();
     }
 
-    // beans
-
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
