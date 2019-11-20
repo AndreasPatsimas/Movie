@@ -14,13 +14,13 @@ INSERT INTO Movie (TITLE, YEAR_ESTABLISHED, USERINSERT, TIMEINSERT) VALUES
 DROP TABLE IF EXISTS MOVIE_DETAILS;
 
 INSERT INTO Details (DIRECTOR, DESC, USERINSERT, TIMEINSERT, MOVIE_ID) VALUES
-('MARX', 'Very Good', 'EXADAKTYLOS', '2019-09-25', 1);
+('MARX', 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto', 'EXADAKTYLOS', '2019-09-25', 1);
 
 INSERT INTO Details (DIRECTOR, DESC, USERINSERT, TIMEINSERT, MOVIE_ID) VALUES
-('LENIN', 'Very Good', 'EXADAKTYLOS', '2019-09-25', 2);
+('LENIN', 'est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis possimus qui neque nisi nulla', 'EXADAKTYLOS', '2019-09-25', 2);
 
 INSERT INTO Details (DIRECTOR, DESC, USERINSERT, TIMEINSERT, MOVIE_ID) VALUES
-('PATSIMAS', 'Very Good', 'EXADAKTYLOS', '2019-09-25', 3);
+('PATSIMAS', 'et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut', 'EXADAKTYLOS', '2019-09-25', 3);
 
 
 

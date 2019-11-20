@@ -10,10 +10,10 @@ INSERT INTO Movie (TITLE, YEAR_ESTABLISHED, USERINSERT, TIMEINSERT) VALUES
 DROP TABLE IF EXISTS MOVIE_DETAILS;
 
 INSERT INTO Details (DIRECTOR, DESC, USERINSERT, TIMEINSERT, MOVIE_ID) VALUES
-('BOOTSROKE', 'Very Good', 'EXADAKTYLOS', '2019-09-25', 4);
+('BOOTSROKE', 'ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit', 'EXADAKTYLOS', '2019-09-25', 4);
 
 INSERT INTO Details (DIRECTOR, DESC, USERINSERT, TIMEINSERT, MOVIE_ID) VALUES
-('PATSIMAS', 'Very Good', 'EXADAKTYLOS', '2019-09-25', 5);
+('PATSIMAS', 'repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque', 'EXADAKTYLOS', '2019-09-25', 5);
 
 
 
