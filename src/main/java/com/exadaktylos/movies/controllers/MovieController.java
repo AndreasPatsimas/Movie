@@ -3,6 +3,8 @@ package com.exadaktylos.movies.controllers;
 import com.exadaktylos.movies.dto.DetailsDto;
 import com.exadaktylos.movies.dto.MovieDto;
 import com.exadaktylos.movies.dto.MovieStoreDto;
+import com.exadaktylos.movies.exceptions.MovieErrorResponse;
+import com.exadaktylos.movies.exceptions.MovieNotFoundException;
 import com.exadaktylos.movies.services.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +48,16 @@ public class MovieController {
         movieService.saveMovie(movieStoreDto);
 
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @ExceptionHandler(MovieNotFoundException.class)
+    public ResponseEntity<MovieErrorResponse> exceptionHandler(Exception ex) {
+
+        MovieErrorResponse movieErrorResponse = MovieErrorResponse.builder()
+                .errorCode(HttpStatus.NOT_FOUND.value())
+                .message(ex.getMessage())
+                .build();
+
+        return new ResponseEntity<MovieErrorResponse>(movieErrorResponse, HttpStatus.OK);
     }
 }
